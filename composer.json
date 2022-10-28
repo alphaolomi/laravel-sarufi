@@ -1,0 +1,67 @@
+{
+    "name": "alphaolomi/laravel-sarufi",
+    "description": "Sarufi for Laravel",
+    "keywords": [
+        "sarufi",        
+        "laravel-sarufi"
+    ],
+    "homepage": "https://github.com/alphaolomi/laravel-sarufi",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alpha Olomi",
+            "email": "alphaolomi@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "alphaolomi/sarufi-php": "^0.0.1",
+        "illuminate/contracts": "^9.0",
+        "spatie/laravel-package-tools": "^1.13.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^6.0",
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alphaolomi\\Laravel\\Sarufi\\": "src"            
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alphaolomi\\LaravelSarufi\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Alphaolomi\\Laravel\\Sarufi\\SarufiServiceProvider"
+            ],
+            "aliases": {
+                "Sarufi": "Alphaolomi\\Laravel\\Sarufi\\Facades\\Sarufi"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
