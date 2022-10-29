@@ -1,5 +1,5 @@
 <?php
 
-use Alphaolomi\LaravelSarufi\Tests\TestCase;
+use Alphaolomi\Laravel\Sarufi\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

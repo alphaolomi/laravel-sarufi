@@ -1,9 +1,9 @@
 <?php
 
-namespace Alphaolomi\LaravelSarufi\Tests;
+namespace Alphaolomi\Laravel\Sarufi\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use Alphaolomi\Laravel\SarufiServiceProvider;
+use Alphaolomi\Laravel\Sarufi\SarufiServiceProvider;
 
 class TestCase extends Orchestra
 {    

@@ -15,7 +15,7 @@ composer require alphaolomi/laravel-sarufi
 
 
 ```bash
-php artisan vendor:publish --tag="laravel-sarufi-config"
+php artisan vendor:publish --tag="sarufi-config"
 ```
 
 ## Configuration 
@@ -30,15 +30,31 @@ SARUFI_PASSWORD="your_nice_password"
 ## Usage
 
 ```php
-use Alphaolomi\Laravel\Facades\Sarufi;
-$bot = Sarufi::createBot([
-    "name" => "YOUR AWESOME BOT NAME",
-    "description" => "PUT DESCRIPTION HERE",
-    "industry" => "YOUR BOT INDUSTRY",
-    "intents" => [],
-    "flows" => [],
-]);
+use Alphaolomi\Laravel\Sarufi\Facades\Sarufi;
+$bot = Sarufi::createBot(
+    name: "Danny bot",
+    description: "PUT DESCRIPTION HERE",
+    industry: "YOUR BOT INDUSTRY",
+    intents: [],
+    flows: []
+);
+
 print_r($bot1);
+// Output
+// => [
+//      "intents" => [],
+//      "user_id" => 54,
+//      "description" => "PUT DESCRIPTION HERE",
+//      "industry" => "YOUR BOT INDUSTRY",
+//      "created_at" => "2022-10-20T14:24:32.862859",
+//      "name" => "Danny bot",
+//      "flows" => [],
+//      "id" => 81,
+//      "model_name" => "models/24bea90e2ad6f9d279d4fa86795c8ea0.pkl",
+//      "visible_on_community" => false,
+//      "updated_at" => "2022-10-20T14:24:32.862872",
+//    ]
+
 
 // OR
 // From files with intent and metadata/

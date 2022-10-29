@@ -35,7 +35,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Alphaolomi\\LaravelSarufi\\Tests\\": "tests"
+            "Alphaolomi\\Laravel\\Sarufi\\Tests\\": "tests"
         }
     },
     "scripts": {

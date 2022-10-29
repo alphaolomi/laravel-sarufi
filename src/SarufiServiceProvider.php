@@ -24,16 +24,17 @@ class SarufiServiceProvider extends PackageServiceProvider
 
     public function packageRegistered()
     {
-        $username = config('sarufi.username', "");
-        $password = config('sarufi.password', "");
-        if (empty($username)) {
-            throw new \RuntimeException("Username is missing: add SARUDI_USERNAME to you .env file");
-        }
-        if (empty($password)) {
-            throw new \RuntimeException("Password is missing: add SARUDI_PASSWORD to you .env file");
-        }
-
-        $this->app->bind('sarufi', function () use ($username, $password) {
+       
+        $this->app->singleton('sarufi', function () {
+            $username = config('sarufi.username', "");
+            $password = config('sarufi.password', "");
+            if (empty($username)) {
+                throw new \RuntimeException("Username is missing: add SARUFI_USERNAME to you .env file");
+            }
+            if (empty($password)) {
+                throw new \RuntimeException("Password is missing: add SARUFI_PASSWORD to you .env file");
+            }
+    
             return new Sarufi(
                 username: $username,
                 password: $password
