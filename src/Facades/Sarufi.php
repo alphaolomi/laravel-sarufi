@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \Alphaolomi\Laravel\Sarufi\Sarufi
- * 
+ *
  * @method static createBot(string $name, null|string $description = null, string $industry = "general", $flow = [], $intents = [], bool $visibleOnCommunity = false)
  * @method static createFromFile($metadata = null, $intents = null, $flow = null)
  * @method static updateBot($id, $name, $industry, $description, $intents, $flow, $visibleOnCommunit)
